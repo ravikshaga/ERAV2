@@ -1,17 +1,10 @@
 from tqdm import tqdm
 
-# Data to plot accuracy and loss graphs
-train_losses = []
-test_losses = []
-train_acc = []
-test_acc = []
-
-test_incorrect_pred = {'images': [], 'ground_truths': [], 'predicted_vals': []}
 
 def GetCorrectPredCount(pPrediction, pLabels):
   return pPrediction.argmax(dim=1).eq(pLabels).sum().item()
 
-def train(model, device, train_loader, optimizer, criterion):
+def train(model, device, train_loader, optimizer, criterion, train_losses, train_acc):
   model.train()
   pbar = tqdm(train_loader)
 
@@ -41,8 +34,9 @@ def train(model, device, train_loader, optimizer, criterion):
 
   train_acc.append(100*correct/processed)
   train_losses.append(train_loss/len(train_loader))
+  return train_losses, train_acc
 
-def test(model, device, test_loader, criterion):
+def test(model, device, test_loader, criterion, test_losses, test_acc):
     model.eval()
 
     test_loss = 0
@@ -65,3 +59,4 @@ def test(model, device, test_loader, criterion):
     print('Test set: Average loss: {:.4f}, Accuracy: {}/{} ({:.2f}%)\n'.format(
         test_loss, correct, len(test_loader.dataset),
         100. * correct / len(test_loader.dataset)))
+    return test_losses, test_acc
