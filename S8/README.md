@@ -12,7 +12,8 @@ The repo also has a models.py file that has the details of the 3 models used for
 - GroupNorm: Net_GN (with 4 groups)
 - LayerNorm: Net_LN
 
-The networks have been optimized to be under 50k parameters, with a receptive field of 44? Details for the BatchNorm model are given below.
+The networks have been optimized to be under 50k parameters, with a receptive field of 44? Details for the BatchNorm model are given below.  
+
 ![Alt text](model_summary.png?raw=true "Title")
 
 ## - your findings for normalization techniques?
