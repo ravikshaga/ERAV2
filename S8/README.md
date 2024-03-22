@@ -27,7 +27,8 @@ The networks have been optimized to be under 50k parameters, with a receptive fi
 - LayerNor performed the worst of the 3 models (no modifications on mode or hyperparameters, only changed GN to LN). Model overfitting and has lower train/test error relative to other 2 models.
 
 ## - add all your graphs
-
+- Training and test errors in each normalization scenario. 
+![Alt text](S8_image1.jpg?raw=true "Title")
 
 
 ## - your collection-of-misclassified-images 
