@@ -31,4 +31,15 @@ The networks have been optimized to be under 50k parameters, with a receptive fi
 ![Alt text](S8_image1.jpg?raw=true "Title")
 
 
-## - your collection-of-misclassified-images 
+## - your collection-of-misclassified-images
+- Some errors from BatchNorm model below
+![Alt text](bn_images.png?raw=true "Title")
+
+
+- Some errors from GroupNorm model below
+![Alt text](gn_images.png?raw=true "Title")
+
+
+  
+- Some errors from LayerNorm model below
+![Alt text](ln_images.png?raw=true "Title")  
